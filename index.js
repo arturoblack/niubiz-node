@@ -1,4 +1,3 @@
-const VisaNet = require('./visanet');
+const Niubiz = require('./niubiz');
 
-// module.exports = VisaNet;
-exports.VisaNet = VisaNet;
+exports.Niubiz = Niubiz;

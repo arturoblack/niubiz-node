@@ -5,7 +5,7 @@ const request = require('request');
 /**
  * VisaNet
  */
-class VisaNet {
+class Niubiz {
 
   /**
    * VisaNet object
@@ -14,18 +14,18 @@ class VisaNet {
   constructor(config) {
     config = config || {};
 
-    this.user = config.user || process.env.VISANET_USER;
-    this.password = config.password || process.env.VISANET_PASSWORD;
-    this.merchantId = config.merchantId || process.env.VISANET_MERCHANT_ID;
+    this.user = config.user || process.env.NIUBIZ_USER;
+    this.password = config.password || process.env.NIUBIZ_PASSWORD;
+    this.merchantId = config.merchantId || process.env.NIUBIZ_MERCHANT_ID;
 
     // defaults
-    const env = config.env || process.env.VISANET_ENV || 'prod';
-    const apiUrlProd =  process.env.VISANET_API_URL_PROD || 'https://apiprod.vnforapps.com';
-    const apiUrlDev =  process.env.VISANET_API_URL_DEV || 'https://apitestenv.vnforapps.com';
+    const env = config.env || process.env.NIUBIZ_ENV || 'prod';
+    const apiUrlProd =  process.env.NIUBIZ_API_URL_PROD || 'https://apiprod.vnforapps.com';
+    const apiUrlDev =  process.env.NIUBIZ_API_URL_DEV || 'https://apitestenv.vnforapps.com';
     this.apiUrl = env === 'prod' ? apiUrlProd : apiUrlDev;
 
-    this.channel = config.channel || process.env.VISANET_MERCHANT_ID || 'web';
-    this.currency = config.currency || process.env.VISANET_DEFAULT_CURRENCY || 'PEN';
+    this.channel = config.channel || process.env.NIUBIZ_MERCHANT_ID || 'web';
+    this.currency = config.currency || process.env.NIUBIZ_DEFAULT_CURRENCY || 'PEN';
   }
 
   /**
@@ -136,4 +136,4 @@ class VisaNet {
   }
 }
 
-module.exports = VisaNet;
+module.exports = Niubiz;

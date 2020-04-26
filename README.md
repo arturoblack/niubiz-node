@@ -1,7 +1,7 @@
-VISANET(Perú) NODEJS 
+NIUBIZ(Perú) NODEJS *ex visanet
 ===
 
-implementacion de visanet(Perú) para NodeJS
+implementacion de NIUBIZ(Perú) para NodeJS
 
 [ver ejemplo](https://github.com/arturoblack/visanet-nodejs-ejemplo)
 
@@ -10,19 +10,19 @@ Instalación
 ---
 
 ``` bash
-npm i @arturoblack/visanet
+npm i @curiosity/niubiz
 ```
 
 Uso
 ---
 
-Instanciacón de la clase VisaNet
+Instanciacón de la clase Niubiz
 
 ``` js
-const {VisaNet} = require('@arturoblack/visanet');
+const {Niubiz} = require('@arturoblack/niubiz');
 
 
-const visa = new VisaNet({
+const visa = new Niubiz({
   user: 'email',
   password: 'password',
   merchantId: 'codigo de comercio',
